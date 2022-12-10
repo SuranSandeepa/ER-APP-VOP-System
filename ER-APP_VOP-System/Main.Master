@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ER_APP_VOP_System.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--Bootstrap CSS--%>
+    <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+     <%--DatabaseTables CSS--%>
+    <link href="Datatables/CSS/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--Fontawesome CSS--%>
+    <link href="Fontawesome/css/all.css" rel="stylesheet" />
+     <%--Jquery--%>
+    <script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
+     <%--Popper JS--%>
+    <script src="Bootstrap/JS/popper.min.js"></script>
+     <%--Bootstrap JS--%>
+    <script src="Bootstrap/JS/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <img src="Images/MAS-Holdings-White.png" width="70" height="30"/>
+                    ER-APP
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    area-expanded="false" area-label="Toggle navigation" href="WebForm1.aspx">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="WebForm1.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="AdminScreen.aspx">Admin Screen</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="VOPMarkingScreen.aspx">VOP Marking</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Main Content Placeholder-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Main Content Placeholder-->
+
+    </form>
+</body>
+</html>
