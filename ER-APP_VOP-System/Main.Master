@@ -25,17 +25,18 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <img src="Images/MAS-Holdings-White.png" width="70" height="30"/>
-                    ER-APP
+                <img src="Images/MAS-Holdings-White.png" width="70" height="30" />
+                &nbsp;&nbsp;
+                    <a class="navbar-brand" href="#">VOP-System</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    area-expanded="false" area-label="Toggle navigation" href="WebForm1.aspx">
+                    area-expanded="false" area-label="Toggle navigation" href="HomePage.aspx">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="WebForm1.aspx">Home</a>
+                            <a class="nav-link" href="HomePage.aspx">Home</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="AdminScreen.aspx">Admin Screen</a>
@@ -51,6 +52,7 @@
         <!--Main Content Placeholder-->
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </asp:ContentPlaceHolder>
         </div>
         <!--Main Content Placeholder-->

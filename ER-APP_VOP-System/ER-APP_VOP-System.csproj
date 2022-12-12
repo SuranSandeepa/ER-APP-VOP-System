@@ -72,6 +72,7 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
+    <Content Include="CSS\HomePage.css" />
     <Content Include="Datatables\CSS\jquery.dataTables.min.css" />
     <Content Include="Datatables\JS\jquery.dataTables.min.js" />
     <Content Include="Fontawesome\css\all.css" />
@@ -2131,7 +2132,7 @@
     <Content Include="Images\MAS-Holdings-White.png" />
     <Content Include="VOPMarkingScreen.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="HomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminScreen.aspx.cs">
@@ -2157,12 +2158,12 @@
     <Compile Include="VOPMarkingScreen.aspx.designer.cs">
       <DependentUpon>VOPMarkingScreen.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -2229,7 +2230,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CSS\" />
     <Folder Include="ExcelUpload\" />
   </ItemGroup>
   <PropertyGroup>

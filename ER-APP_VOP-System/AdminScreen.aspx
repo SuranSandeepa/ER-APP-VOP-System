@@ -5,11 +5,14 @@
 
     <section>
         <div class="container">
-            <h1>VOP Excel Upload</h1>
+            <h1 style="text-align:center; font-size:45px;text-transform:uppercase;letter-spacing:2px;margin-top:25px;font-family:merinda">VOP Excel Upload</h1>
         </div>
     </section>
 
-    <div class="container">
+    <br />
+    <br />
+
+    <div class="container" style="text-align:center;">
           <div class="row align-items-center">
             <div class="col">
               <asp:FileUpload ID="ExcelFileUpload" runat="server" />
