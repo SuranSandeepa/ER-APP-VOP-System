@@ -16,7 +16,8 @@ namespace ER_APP_VOP_System
 
     public partial class AdminScreen : System.Web.UI.Page
     {
-        private Connection connection;
+
+        //private Connection connection;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,9 +26,9 @@ namespace ER_APP_VOP_System
 
         protected void btnExcelUpload_Click(object sender, EventArgs e)
         {
-            int id;
-            String name;
-            int age;
+            String date, epf, pn, name, team, classification, lastWorkingDate, noOfAbsentDays, address, reasonCategory, reason, firstVop,
+                firstVopStatus, resignTerminationPayment, terminationPaymentStatus, secondVop, secondVopStatus,
+                resignation, terminationDate, terminationApproval, terminationStatus, er, vsl, factoryShift, servicePeriod;
 
             string path = Path.GetFileName(ExcelFileUpload.FileName);
 
@@ -40,12 +41,36 @@ namespace ER_APP_VOP_System
             OleDbDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                // Response.Write("<br/>"+dr[0].ToString());
-                id = Convert.ToInt32(dr[0].ToString());
-                name = dr[1].ToString();
-                age = Convert.ToInt32(dr[2].ToString());
 
-                SaveExcelData(id, name, age);
+                date = dr[0].ToString();
+                epf = dr[1].ToString();
+                pn = dr[2].ToString();
+                name = dr[3].ToString();
+                team = dr[4].ToString();
+                classification = dr[5].ToString();
+                lastWorkingDate = dr[6].ToString();
+                noOfAbsentDays = dr[7].ToString();
+                address = dr[8].ToString();
+                reasonCategory = dr[9].ToString();
+                reason = dr[10].ToString();
+                firstVop = dr[11].ToString();
+                firstVopStatus = dr[12].ToString();
+                resignTerminationPayment = dr[13].ToString();
+                terminationPaymentStatus = dr[14].ToString();
+                secondVop = dr[15].ToString();
+                secondVopStatus = dr[16].ToString();
+                resignation = dr[17].ToString();
+                terminationDate = dr[18].ToString();
+                terminationApproval = dr[19].ToString();
+                terminationStatus = dr[20].ToString();
+                er = dr[21].ToString();
+                vsl = dr[22].ToString();
+                factoryShift = dr[23].ToString();
+                servicePeriod = dr[24].ToString();
+
+                SaveExcelData(date, epf, pn, name, team, classification, lastWorkingDate, noOfAbsentDays, address, reasonCategory, reason, firstVop, firstVopStatus,
+                    resignTerminationPayment, terminationPaymentStatus, secondVop, secondVopStatus, resignation, terminationDate, terminationApproval, terminationStatus,
+                    er, vsl, factoryShift, servicePeriod);
 
             }
 
@@ -58,9 +83,11 @@ namespace ER_APP_VOP_System
             File.Delete(ExcelPath);
         }
 
-        private void SaveExcelData(int id, String name, int age)
-        {           
-            String query = "insert into testTable(id,name,age) values(" + id + ",'" + name + "','" + age + "')";
+        private void SaveExcelData(String date, String epf, String pn, String name, String team, String classification, String lastWorkingDate, String noOfAbsentDays, String address, String reasonCategory, String reason, String firstVop, String firstVopStatus,
+                    String resignTerminationPayment, String terminationPaymentStatus, String secondVop, String secondVopStatus, String resignation, String terminationDate, String terminationApproval, String terminationStatus,
+                    String er, String vsl, String factoryShift, String servicePeriod)
+        {
+            String query = "insert into Database_No_1(Date,EPF,PN, Name, Team, Classification, Last_Working_Date, Number_Of_Absent_Days, Address, Reason_Category, Reason, First_VOP, First_VOP_Status, Resign_Termination_Payment, Termination_Payment_Status, Second_VOP, Secod_VOP_Status, Resignation, Termination_Date, Termination_Approval, Termination_Status, ER, VSL, Factory_And_Shift, Service_Period) values('" + date + "','" + epf + "','" + pn + "','" + name + "','" + team + "','" + classification + "','" + lastWorkingDate + "','" + noOfAbsentDays + "','" + address + "','" + reasonCategory + "','" + reason + "','" + firstVop + "','" + firstVopStatus + "','" + resignTerminationPayment + "','" + terminationPaymentStatus + "','" + secondVop + "','" + secondVopStatus + "','" + resignation + "','" + terminationDate + "','" + terminationApproval + "','" + terminationStatus + "','" + er + "','" + vsl + "','" + factoryShift + "','" + servicePeriod + "')";
             String mycon = "Data Source=DESKTOP-DCCUTP6\\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";
             SqlConnection con = new SqlConnection(mycon);
             con.Open();
