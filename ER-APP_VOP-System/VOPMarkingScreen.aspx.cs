@@ -32,7 +32,7 @@ namespace ER_APP_VOP_System
             String mycon = "Data Source=DESKTOP-DCCUTP6\\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";
 
             //Select Query 
-            String myquery = "Select id,name,age from testTable where age = " + dwFactoryShift.SelectedItem.Value;
+            String myquery = "Select EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,Factory_And_Shift from Database_No_1 where Factory_And_Shift = " + dwFactoryShift.SelectedItem.Value;
            
             SqlConnection con = new SqlConnection(mycon);
             SqlCommand cmd = new SqlCommand();
