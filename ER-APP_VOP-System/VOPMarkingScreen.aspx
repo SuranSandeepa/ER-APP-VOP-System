@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 39%;
+            width: 33%;
             height: 37px;
             margin: auto;
         }
@@ -15,18 +15,21 @@
 
     <br />
 
-    <div style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;">
-        <div >
+    <%--style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;"--%>
+
+    <%--dropdown--%>
+    <div >
+        <div class="container bg-success w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" >
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-         <asp:DropDownList ID="dwFactoryShift" runat="server">
-             <asp:ListItem>Factory 1 Shift A</asp:ListItem>
-             <asp:ListItem>Factory 1 Shift B</asp:ListItem>
-             <asp:ListItem>Factory 2 Shift A</asp:ListItem>
-                        <asp:ListItem>Factory 2 Shift B</asp:ListItem>
-             <asp:ListItem>Departments</asp:ListItem>
-                        </asp:DropDownList>
+                         <asp:DropDownList ID="dwFactoryShift" runat="server">
+                             <asp:ListItem>Factory 1 Shift A</asp:ListItem>
+                             <asp:ListItem>Factory 1 Shift B</asp:ListItem>
+                             <asp:ListItem>Factory 2 Shift A</asp:ListItem>
+                             <asp:ListItem>Factory 2 Shift B</asp:ListItem>
+                             <asp:ListItem>Departments</asp:ListItem>
+                         </asp:DropDownList>
                     </td>
                     <td>
                         <asp:Button ID="Button1" runat="server" BackColor="#999999" Text="Search" OnClick="Button1_Click" />
@@ -37,7 +40,12 @@
 
         <br />
 
+
         <div style="margin:auto;">
+<%--            <div>
+                <span>Total Number of Records:</span>
+                <asp:Label ID="lbTotal" runat="server" Text="0"></asp:Label>
+            </div>--%>
             <asp:GridView ID="dgvVOPMarkingScreen" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" EmptyDataText="No Record Found" PageSize="20">
                 <Columns>
                     <asp:BoundField DataField="EPF" HeaderText="EPF">
