@@ -24,21 +24,21 @@ namespace ER_APP_VOP_System
         protected global::System.Web.UI.WebControls.DropDownList dwFactoryShift;
 
         /// <summary>
-        /// Button1 control.
+        /// btnSearchFnS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnSearchFnS;
 
         /// <summary>
-        /// dgvVOPMarkingScreen control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvVOPMarkingScreen;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
