@@ -7,15 +7,15 @@
     <title></title>
     <%--Bootstrap CSS--%>
     <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
-     <%--DatabaseTables CSS--%>
+    <%--DatabaseTables CSS--%>
     <link href="Datatables/CSS/jquery.dataTables.min.css" rel="stylesheet" />
-     <%--Fontawesome CSS--%>
+    <%--Fontawesome CSS--%>
     <link href="Fontawesome/css/all.css" rel="stylesheet" />
-     <%--Jquery--%>
+    <%--Jquery--%>
     <script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
-     <%--Popper JS--%>
+    <%--Popper JS--%>
     <script src="Bootstrap/JS/popper.min.js"></script>
-     <%--Bootstrap JS--%>
+    <%--Bootstrap JS--%>
     <script src="Bootstrap/JS/bootstrap.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -40,6 +40,9 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="AdminScreen.aspx">Admin Screen</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="VOPMarkingScreen.aspx">VOP Marking</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="VOPMarkingScreen.aspx">VOP Marking</a>
