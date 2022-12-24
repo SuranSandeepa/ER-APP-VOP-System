@@ -77,7 +77,6 @@ namespace ER_APP_VOP_System
             //Alert
             Response.Write("<script>alert('Data Saved Successfully');</script>");
 
-            // Label4.Text = "Data Has Been Updated Successfully";
             mycon.Close();
 
             File.Delete(ExcelPath);
