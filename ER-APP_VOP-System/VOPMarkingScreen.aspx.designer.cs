@@ -33,60 +33,6 @@ namespace ER_APP_VOP_System
         protected global::System.Web.UI.WebControls.Button btnSearchFnS;
 
         /// <summary>
-        /// lblEPF control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEPF;
-
-        /// <summary>
-        /// txtEPF control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEPF;
-
-        /// <summary>
-        /// lblUpdateReasonCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUpdateReasonCategory;
-
-        /// <summary>
-        /// dwUpdateReasonCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dwUpdateReasonCategory;
-
-        /// <summary>
-        /// btnUpdateReasonCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateReasonCategory;
-
-        /// <summary>
-        /// btnCancelReasonCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelReasonCategory;
-
-        /// <summary>
         /// dgvVOPMarkingScreen control.
         /// </summary>
         /// <remarks>

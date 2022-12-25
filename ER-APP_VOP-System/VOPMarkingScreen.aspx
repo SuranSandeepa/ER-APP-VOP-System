@@ -45,7 +45,7 @@
 
 
         <%--Update Field--%>
-        <div>
+<%--        <div>
             <table>
                 <tr>
                     <td>
@@ -78,7 +78,7 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        </div>--%>
 
         <br />
 
@@ -89,7 +89,7 @@
                 <asp:Label ID="lbTotal" runat="server" Text="0"></asp:Label>
             </div>--%>
 
-            <asp:GridView ID="dgvVOPMarkingScreen" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" EmptyDataText="No Record Found" PageSize="20">
+            <asp:GridView ID="dgvVOPMarkingScreen" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" EmptyDataText="No Record Found" PageSize="20" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating">
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
@@ -100,19 +100,32 @@
                             <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel" />
                         </EditItemTemplate>
                     </asp:TemplateField>
-                    <asp:BoundField DataField="EPF" HeaderText="EPF">
+<%--                    <asp:BoundField DataField="EPF" ID="tbETP" HeaderText="EPF">
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>--%>
+                    <asp:TemplateField HeaderText="EPF">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_EPF" runat="server" Text='<%#Eval("EPF") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Name" HeaderText="Name">
+                    <asp:BoundField DataField="Team" HeaderText="Team" ReadOnly="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Team" HeaderText="Team">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="Number_Of_Absent_Days" HeaderText="Number Of Absent Days">
+                    <asp:BoundField DataField="Number_Of_Absent_Days" HeaderText="Number Of Absent Days" ReadOnly="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="Reason Category">
+                        <ItemTemplate>
+                            <asp:Label ID="lblRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                    <%--                    <asp:TemplateField HeaderText="Reason Category">
                         <EditItemTemplate>
                             <asp:DropDownList ID="dwGVUpdateReasonCategory" runat="server" SelectedValue='<%# Bind("Reason_Category") %>'>
                                 <asp:ListItem>Select Gender</asp:ListItem>
@@ -131,7 +144,7 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("Reason_Category") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
+                    </asp:TemplateField>--%>
                     <asp:BoundField DataField="Factory_And_Shift" HeaderText="Factory And Shift" ReadOnly="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
