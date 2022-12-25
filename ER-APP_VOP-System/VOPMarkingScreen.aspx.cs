@@ -23,7 +23,7 @@ namespace ER_APP_VOP_System
 
         }
 
-
+        //Search by Factory & Shift Function
         protected void btnSearchFnS_Click(object sender, EventArgs e)
         {
             //Select Query 

@@ -93,11 +93,11 @@
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="lbEdit" CommandArgument='<%# Eval("EPF") %>' CommandName="EditRow" ForeColor="#8C4510" runat="server">Edit</asp:LinkButton>
+                            <asp:Button ID="btn_Edit" runat="server" Text="Edit" CommandName="Edit" />
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:LinkButton ID="lbUpdate" CommandArgument='<%# Eval("EPF") %>' CommandName="UpdateRow" ForeColor="#8C4510" runat="server">Update</asp:LinkButton>
-                            <asp:LinkButton ID="lbCancel" CommandArgument='<%# Eval("EPF") %>' CommandName="CancelUpdate" ForeColor="#8C4510" runat="server" CausesValidation="false">Cancel</asp:LinkButton>
+                            <asp:Button ID="btn_Update" runat="server" Text="Update" CommandName="Update" />
+                            <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel" />
                         </EditItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="EPF" HeaderText="EPF">
