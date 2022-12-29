@@ -73,6 +73,7 @@
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
     <Content Include="CSS\HomePage.css" />
+    <Content Include="CSS\UploadFilebtn.css" />
     <Content Include="Images\MAS-Holdings-White.png" />
     <Content Include="VOPManaging.aspx" />
     <Content Include="VOPMarkingScreen.aspx" />

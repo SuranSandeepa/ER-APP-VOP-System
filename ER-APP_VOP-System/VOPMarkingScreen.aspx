@@ -15,17 +15,26 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <%--Header Topic--%>
+    <section>
+        <div class="container">
+            <h1 style="text-align: center; font-size: 45px; text-transform: uppercase; letter-spacing: 2px; margin-top: 25px; font-family: merinda">
+                VOP Marking Screen
+            </h1>
+        </div>
+    </section>
+
     <br />
 
     <%--style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;"--%>
 
     <%--dropdown--%>
     <div>
-        <div class="container bg-success w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom">
+        <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom">
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:DropDownList ID="dwFactoryShift" runat="server">
+                        <asp:DropDownList ID="dwFactoryShift" CssClass="btn btn-primary dropdown-toggle" runat="server">
                             <asp:ListItem>Factory 1 Shift A</asp:ListItem>
                             <asp:ListItem>Factory 1 Shift B</asp:ListItem>
                             <asp:ListItem>Factory 2 Shift A</asp:ListItem>
@@ -35,7 +44,7 @@
 
                     </td>
                     <td>
-                        <asp:Button ID="btnSearchFnS" runat="server" BackColor="#333333" Text="Search" OnClick="btnSearchFnS_Click" BorderStyle="None" Font-Bold="True" Font-Size="Medium" ForeColor="White" />
+                        <asp:Button ID="btnSearchFnS" class="btn btn-dark" runat="server" BackColor="#333333" Text="Search" OnClick="btnSearchFnS_Click" BorderStyle="None" Font-Size="Medium" ForeColor="White" />
                     </td>
                 </tr>
             </table>
@@ -45,7 +54,7 @@
 
 
         <%--Update Field--%>
-<%--        <div>
+        <%--        <div>
             <table>
                 <tr>
                     <td>
@@ -80,29 +89,26 @@
             </table>
         </div>--%>
 
-        <br />
-
         <%--DataGridView--%>
-        <div style="margin: auto;" class="container w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom">
-            <%-- <div>
-                <span>Total Number of Records:</span>
-                <asp:Label ID="lbTotal" runat="server" Text="0"></asp:Label>
-            </div>--%>
+        <div class="container">
+            <%--BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black"--%>
 
-            <asp:GridView ID="dgvVOPMarkingScreen" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" EmptyDataText="No Record Found" PageSize="20" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating">
+            <asp:GridView ID="dgvVOPMarkingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating" HorizontalAlign="Center">
                 <Columns>
-                    <asp:TemplateField>
+                    <asp:TemplateField HeaderText="Update">
                         <ItemTemplate>
-                            <asp:Button ID="btn_Edit" runat="server" Text="Edit" CommandName="Edit" />
+                            <asp:Button ID="btn_Edit" runat="server" Text="Edit" CommandName="Edit" class="btn btn-outline-primary btn-sm" />
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:Button ID="btn_Update" runat="server" Text="Update" CommandName="Update" />
-                            <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel" />
+                            <asp:Button ID="btn_Update" runat="server" Text="Update" CommandName="Update" class="btn btn-outline-primary btn-sm" />
+                            <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel" class="btn btn-outline-warning btn-sm" />
                         </EditItemTemplate>
                     </asp:TemplateField>
-<%--                    <asp:BoundField DataField="EPF" ID="tbETP" HeaderText="EPF">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>--%>
+                    <asp:TemplateField HeaderText="NO" Visible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="lblNO" runat="server" Text='<%#Eval("no") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="EPF">
                         <ItemTemplate>
                             <asp:Label ID="lbl_EPF" runat="server" Text='<%#Eval("EPF") %>'></asp:Label>
@@ -122,13 +128,7 @@
                             <asp:Label ID="lblRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:TextBox>
-                        </EditItemTemplate>
-                    </asp:TemplateField>
-                    <%--                    <asp:TemplateField HeaderText="Reason Category">
-                        <EditItemTemplate>
-                            <asp:DropDownList ID="dwGVUpdateReasonCategory" runat="server" SelectedValue='<%# Bind("Reason_Category") %>'>
-                                <asp:ListItem>Select Gender</asp:ListItem>
+                            <asp:DropDownList ID="ddRC" runat="server" Text='<%#Eval("Reason_Category") %>'>
                                 <asp:ListItem>Absent - Informed</asp:ListItem>
                                 <asp:ListItem>Absent - Not Informed</asp:ListItem>
                                 <asp:ListItem>Leave - Applied</asp:ListItem>
@@ -139,18 +139,15 @@
                                 <asp:ListItem>1Month Resign</asp:ListItem>
                                 <asp:ListItem>VOP</asp:ListItem>
                             </asp:DropDownList>
+                            <%--<asp:TextBox ID="txtRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:TextBox>--%>
                         </EditItemTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("Reason_Category") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>--%>
+                    </asp:TemplateField>
                     <asp:BoundField DataField="Factory_And_Shift" HeaderText="Factory And Shift" ReadOnly="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
                 <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F7F7F7" />

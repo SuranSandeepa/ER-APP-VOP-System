@@ -31,7 +31,7 @@ namespace ER_APP_VOP_System
         protected void ShowData()
         {
             //Select Query (Search by Factory_And_Shift LIKE)
-            String myquery = "SELECT EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,Factory_And_Shift FROM Database_No_1 where Factory_And_Shift LIKE '" + dwFactoryShift.SelectedItem.Text + "'";
+            String myquery = "SELECT no,EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,Factory_And_Shift FROM Database_No_1 where Factory_And_Shift LIKE '" + dwFactoryShift.SelectedItem.Text + "'";
 
             con = new SqlConnection(mycon);
             cmd = new SqlCommand();
@@ -54,17 +54,6 @@ namespace ER_APP_VOP_System
         }
 
 
-        //Clear Function
-        public void Clear()
-        {
-            dwUpdateReasonCategory.SelectedValue = "";
-        }
-
-        protected void btnCancelReasonCategory_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
         protected void dgvVOPMarkingScreen_RowEditing(object sender, GridViewEditEventArgs e)
         {
             //NewEditIndex property used to determine the index of the row being edited.
@@ -82,14 +71,14 @@ namespace ER_APP_VOP_System
         protected void dgvVOPMarkingScreen_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             //Finding the controls from Gridview for the row which is going to update
-            Label EPF = dgvVOPMarkingScreen.Rows[e.RowIndex].FindControl("lbl_EPF") as Label;
-            TextBox reasonCategory = dgvVOPMarkingScreen.Rows[e.RowIndex].FindControl("txtRC") as TextBox;
+            Label lblNO = dgvVOPMarkingScreen.Rows[e.RowIndex].FindControl("lblNO") as Label;
+            DropDownList reasonCategory = dgvVOPMarkingScreen.Rows[e.RowIndex].FindControl("ddRC") as DropDownList;
 
             con = new SqlConnection(mycon);
             con.Open();
 
             //Updating the record 
-            SqlCommand cmd = new SqlCommand("UPDATE Database_No_1 SET Reason_Category='" + reasonCategory.Text + "' WHERE EPF= '" + EPF.Text + "'", con);
+            SqlCommand cmd = new SqlCommand("UPDATE Database_No_1 SET Reason_Category='" + reasonCategory.SelectedValue + "' WHERE no= '" + lblNO.Text + "'", con);
             cmd.ExecuteNonQuery();
             con.Close();
 

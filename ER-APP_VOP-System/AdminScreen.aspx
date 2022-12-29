@@ -5,20 +5,22 @@
 
     <section>
         <div class="container">
-            <h1 style="text-align:center; font-size:45px;text-transform:uppercase;letter-spacing:2px;margin-top:25px;font-family:merinda">VOP Excel Upload</h1>
+            <h1 style="text-align:center; font-size:45px;text-transform:uppercase;letter-spacing:2px;margin-top:25px;font-family:merinda">
+                VOP Excel Upload
+            </h1>
         </div>
     </section>
 
     <br />
     <br />
 
-    <div class="container" style="text-align:center;">
+    <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="text-align:center;">
           <div class="row align-items-center">
             <div class="col">
               <asp:FileUpload ID="ExcelFileUpload" runat="server" />
             </div>
             <div class="col">
-              <asp:Button Text="Upload" OnClick = "btnExcelUpload_Click" runat="server" />
+              <asp:Button class="btn btn-dark" Text="Upload" OnClick = "btnExcelUpload_Click" runat="server" />
             </div>
            </div>
     </div>
