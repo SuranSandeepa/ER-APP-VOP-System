@@ -75,6 +75,8 @@
     <Content Include="CSS\HomePage.css" />
     <Content Include="CSS\UploadFilebtn.css" />
     <Content Include="Images\MAS-Holdings-White.png" />
+    <Content Include="Images\Resignation1.jpeg" />
+    <Content Include="Resignation.aspx" />
     <Content Include="VOPManaging.aspx" />
     <Content Include="VOPMarkingScreen.aspx" />
     <Content Include="Web.config" />
@@ -97,6 +99,13 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resignation.aspx.cs">
+      <DependentUpon>Resignation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resignation.aspx.designer.cs">
+      <DependentUpon>Resignation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VOPManaging.aspx.cs">
       <DependentUpon>VOPManaging.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
