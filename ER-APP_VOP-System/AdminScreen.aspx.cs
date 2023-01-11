@@ -21,7 +21,7 @@ namespace ER_APP_VOP_System
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridView();
         }
 
         protected void btnExcelUpload_Click(object sender, EventArgs e)
@@ -94,6 +94,19 @@ namespace ER_APP_VOP_System
             cmd.CommandText = query;
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
+        }
+
+        private void GridView()
+        {
+            using (SqlConnection sqlconn = new SqlConnection(mycon))
+            {
+                sqlconn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Database_No_1", mycon);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvExcelUpload.DataSource = dt;
+                dgvExcelUpload.DataBind();
+            }
         }
     }
 }

@@ -43,37 +43,44 @@
                     <form>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="Date" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="Date" />--%>
+                                <asp:TextBox ID="txtRDate" class="form-control my-1 p-1" placeholder="Date" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="EPF" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="EPF" />--%>
+                                <asp:TextBox ID="txtREPF" class="form-control my-1 p-1" placeholder="EPF" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="Name" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="Name" />--%>
+                                <asp:TextBox ID="txtRName" class="form-control my-1 p-1" placeholder="Name" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="Team" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="Team" />--%>
+                                <asp:TextBox ID="txtRTeam" class="form-control my-1 p-1" placeholder="Team" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="LWD" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="LWD" />--%>
+                                <asp:TextBox ID="txtRLWD" class="form-control my-1 p-1" placeholder="LWD" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="Reasignation Date" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="Reasignation Date" />--%>
+                                <asp:TextBox ID="txtRrd" class="form-control my-1 p-1" placeholder="Reasignation Date" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control my-1 p-1" placeholder="Termination Payment Date" />
+                                <%--<input type="text" class="form-control my-1 p-1" placeholder="Termination Payment Date" />--%>
+                                <asp:TextBox ID="txtRtpd" class="form-control my-1 p-1" placeholder="Termination Payment Date" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
