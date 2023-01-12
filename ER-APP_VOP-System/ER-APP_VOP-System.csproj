@@ -75,8 +75,18 @@
     <Content Include="CSS\HomePage.css" />
     <Content Include="CSS\UploadFilebtn.css" />
     <Content Include="Images\MAS-Holdings-White.png" />
-    <Content Include="Images\Resignation1.jpeg" />
+    <Content Include="Images\r1.jpg" />
+    <Content Include="Images\r10.jpeg" />
+    <Content Include="Images\r2.jpeg" />
+    <Content Include="Images\r3.png" />
+    <Content Include="Images\r4.png" />
+    <Content Include="Images\r5.png" />
+    <Content Include="Images\r6.png" />
+    <Content Include="Images\r7.png" />
+    <Content Include="Images\r8.jpeg" />
+    <Content Include="Images\r9.png" />
     <Content Include="Resignation.aspx" />
+    <Content Include="ResignationForm.aspx" />
     <Content Include="VOPManaging.aspx" />
     <Content Include="VOPMarkingScreen.aspx" />
     <Content Include="Web.config" />
@@ -105,6 +115,13 @@
     </Compile>
     <Compile Include="Resignation.aspx.designer.cs">
       <DependentUpon>Resignation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResignationForm.aspx.cs">
+      <DependentUpon>ResignationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResignationForm.aspx.designer.cs">
+      <DependentUpon>ResignationForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="VOPManaging.aspx.cs">
       <DependentUpon>VOPManaging.aspx</DependentUpon>

@@ -18,16 +18,36 @@ namespace ER_APP_VOP_System
     {
 
         //DB Connection
-        String mycon = @"Data Source=DESKTOP-DCCUTP6\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataAdapter da;
-        DataSet ds;
+        String mycon = @"Data Source=DESKTOP-DCCUTP6\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";        
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            GridView();   
+        }
 
+        protected void btnRSave_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(mycon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Resignation(RDate,REPF,RName,RTeam,RLWD,RResignDate,RTerminationPaymentDate) VALUES('" + txtRDate.Text+ "','"+ txtREPF.Text+ "','"+ txtRName.Text+ "','"+ txtRTeam.Text+ "','"+ txtRLWD.Text+ "','"+ txtRrd.Text+ "','" + txtRtpd.Text + "')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Successfully Inserted');", true);
+            GridView();
+        }
+
+        private void GridView()
+        {
+            using (SqlConnection sqlconn = new SqlConnection(mycon))
+            {
+                sqlconn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Resignation", mycon);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                gvResignation.DataSource = dt;
+                gvResignation.DataBind();
+            }
         }
     }
 }

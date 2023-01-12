@@ -11,80 +11,89 @@ namespace ER_APP_VOP_System
 {
 
 
-    public partial class Resignation
+    public partial class ResignationForm
     {
 
         /// <summary>
-        /// txtRDate control.
+        /// txtRdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRDate;
+        protected global::System.Web.UI.WebControls.TextBox txtRdate;
 
         /// <summary>
-        /// txtREPF control.
+        /// txtRepf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtREPF;
+        protected global::System.Web.UI.WebControls.TextBox txtRepf;
 
         /// <summary>
-        /// txtRName control.
+        /// txtRname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRName;
+        protected global::System.Web.UI.WebControls.TextBox txtRname;
 
         /// <summary>
-        /// txtRTeam control.
+        /// txtRteam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRTeam;
+        protected global::System.Web.UI.WebControls.TextBox txtRteam;
 
         /// <summary>
-        /// txtRLWD control.
+        /// txtRlwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRLWD;
+        protected global::System.Web.UI.WebControls.TextBox txtRlwd;
 
         /// <summary>
-        /// txtRrd control.
+        /// txtRresignationdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRrd;
+        protected global::System.Web.UI.WebControls.TextBox txtRresignationdate;
 
         /// <summary>
-        /// txtRtpd control.
+        /// txtRterminationpaymentdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRtpd;
+        protected global::System.Web.UI.WebControls.TextBox txtRterminationpaymentdate;
 
         /// <summary>
-        /// btnRSave control.
+        /// btnRsave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRSave;
+        protected global::System.Web.UI.WebControls.Button btnRsave;
+
+        /// <summary>
+        /// btnRcancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRcancel;
 
         /// <summary>
         /// gvResignation control.

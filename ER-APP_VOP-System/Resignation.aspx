@@ -1,32 +1,34 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Resignation.aspx.cs" Inherits="ER_APP_VOP_System.Resignation" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Resignation.aspx.cs" Inherits="ER_APP_VOP_System.Resignation" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <style>
-        .row{
-            background:rgb(219,226,226);
-            border-radius:30px;
+        .row {
+            background: rgb(219,226,226);
+            border-radius: 30px;
         }
 
-        img{
-            border-top-left-radius:30px;
-            border-bottom-left-radius:30px;
+        img {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
         }
-        .Rsave{
-            border:none;
-            outline:none;
-            height:40px;
-            width:50%;
-            background-color:black;
-            color:white;
-            border-radius:4px;
-            font-weight:bold;
+
+        .Rsave {
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 50%;
+            background-color: orangered;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
         }
-        .Rsave:hover{
-            background:white;
-            border:1px solid;
-            color:black;
-        }
+
+            .Rsave:hover {
+                background: white;
+                border: 1px solid;
+                color: black;
+            }
     </style>
 
 </asp:Content>
@@ -36,7 +38,8 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-5">
-                    <img src="Images/Resignation1.jpeg" class="img-fluid" alt="Resignation-Form" />
+                    <%--<img src="Images/Resignation1.jpeg" class="img-fluid" alt="Resignation-Form" />--%>
+                    <img src="Images/r3.png" class="img-fluid" alt="Resignation-Form" />
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
                     <h1 class="font-weight-bold py-3">Resignation</h1>
@@ -85,7 +88,8 @@
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button type="button" class="Rsave mt-3 mb-5">Save</button>
+                                <%--<button type="button" class="Rsave mt-3 mb-5">Save</button>--%>
+                                <asp:Button ID="btnRSave" class="Rsave mt-3 mb-5" runat="server" Text="Save" OnClick="btnRSave_Click" />
                             </div>
                         </div>
                     </form>
@@ -93,5 +97,24 @@
             </div>
         </div>
     </section>
+
+
+    <section>
+        <div class="container">
+            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server">
+                <Columns>
+                    <asp:BoundField DataField="RDate" HeaderText="Date" />
+                    <asp:BoundField DataField="REPF" HeaderText="EPF" />
+                    <asp:BoundField DataField="RName" HeaderText="Name" />
+                    <asp:BoundField DataField="RTeam" HeaderText="Team" />
+                    <asp:BoundField DataField="RLWD" HeaderText="LWD" />
+                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" />
+                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" />
+                </Columns>
+                <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:GridView>
+        </div>
+    </section>
+
 
 </asp:Content>
