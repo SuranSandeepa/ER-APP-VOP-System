@@ -49,5 +49,16 @@ namespace ER_APP_VOP_System
                 gvResignation.DataBind();
             }
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtRDate.Text = "";
+            txtREPF.Text = "";
+            txtRLWD.Text = "";
+            txtRName.Text = "";
+            txtRrd.Text = "";
+            txtRTeam.Text = "";
+            txtRtpd.Text = "";
+        }
     }
 }
