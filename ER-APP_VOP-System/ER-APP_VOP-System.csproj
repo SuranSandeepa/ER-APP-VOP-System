@@ -74,6 +74,7 @@
     <Content Include="Bootstrap\JS\popper.min.js" />
     <Content Include="CSS\HomePage.css" />
     <Content Include="CSS\UploadFilebtn.css" />
+    <Content Include="Feedback.aspx" />
     <Content Include="Images\MAS-Holdings-White.png" />
     <Content Include="Images\r1.jpg" />
     <Content Include="Images\r10.jpeg" />
@@ -101,6 +102,13 @@
       <DependentUpon>AdminScreen.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

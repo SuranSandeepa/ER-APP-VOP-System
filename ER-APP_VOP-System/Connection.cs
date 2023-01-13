@@ -22,7 +22,6 @@ namespace ER_APP_VOP_System
         public Connection()
         {
             _con = new SqlConnection(@"Data Source=DESKTOP-DCCUTP6\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true");
-            _con.Open();
         }
 
 
