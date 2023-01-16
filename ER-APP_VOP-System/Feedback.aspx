@@ -5,4 +5,12 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <%--Header Topic--%>
+    <section>
+        <div class="container">
+            <h1>
+                Feedaback
+            </h1>
+        </div>
+    </section>
 </asp:Content>

@@ -107,17 +107,59 @@
 
     <section>
         <div class="container">
-            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server" BackColor="#CCCCCC">
+            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server" BackColor="#99CCFF" BorderColor="#003366">
                 <Columns>
-                    <asp:BoundField DataField="RDate" HeaderText="Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
-                    <asp:BoundField DataField="REPF" HeaderText="EPF" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
-                    <asp:BoundField DataField="RName" HeaderText="Name" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
-                    <asp:BoundField DataField="RTeam" HeaderText="Team" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
-                    <asp:BoundField DataField="RLWD" HeaderText="LWD" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
-                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
-                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="RDate" HeaderText="Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="REPF" HeaderText="EPF" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="RName" HeaderText="Name" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="RTeam" HeaderText="Team" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="RLWD" HeaderText="LWD" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
                 </Columns>
-                <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                <HeaderStyle BackColor="Black" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
             </asp:GridView>
         </div>
     </section>

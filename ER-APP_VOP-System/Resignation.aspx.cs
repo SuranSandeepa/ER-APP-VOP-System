@@ -28,13 +28,29 @@ namespace ER_APP_VOP_System
 
         protected void btnRSave_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(mycon);
-            con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Resignation(RDate,REPF,RName,RTeam,RLWD,RResignDate,RTerminationPaymentDate) VALUES('" + txtRDate.Text+ "','"+ txtREPF.Text+ "','"+ txtRName.Text+ "','"+ txtRTeam.Text+ "','"+ txtRLWD.Text+ "','"+ txtRrd.Text+ "','" + txtRtpd.Text + "')", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Successfully Inserted');", true);
-            GridView();
+            if (txtRDate.Text == string.Empty || txtREPF.Text == string.Empty || txtRName.Text == string.Empty || txtRTeam.Text == string.Empty || txtRLWD.Text == string.Empty || txtRrd.Text == string.Empty || txtRtpd.Text == string.Empty )
+            {
+                //Alert
+                Response.Write("<script>alert('All Fields are Required!');</script>");
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(mycon);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO Resignation(RDate,REPF,RName,RTeam,RLWD,RResignDate,RTerminationPaymentDate) VALUES('" + txtRDate.Text + "','" + txtREPF.Text + "','" + txtRName.Text + "','" + txtRTeam.Text + "','" + txtRLWD.Text + "','" + txtRrd.Text + "','" + txtRtpd.Text + "')", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Successfully Inserted');", true);
+                txtRDate.Text = "";
+                txtREPF.Text = "";
+                txtRName.Text = "";
+                txtRTeam.Text = "";
+                txtRLWD.Text = "";
+                txtRrd.Text = "";
+                txtRtpd.Text = "";
+                GridView();
+            }
+
         }
 
         private void GridView()

@@ -95,7 +95,7 @@
         <div class="container">
             <%--BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black"--%>
 
-            <asp:GridView ID="dgvVOPMarkingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating" HorizontalAlign="Center" BackColor="#CCCCCC">
+            <asp:GridView ID="dgvVOPMarkingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating" HorizontalAlign="Center" BackColor="#99CCFF" BorderColor="#003366">
                 <Columns>
                     <asp:TemplateField HeaderText="Update" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
                         <ItemTemplate>
@@ -105,6 +105,12 @@
                             <asp:Button ID="btn_Update" runat="server" Text="Update" CommandName="Update" class="btn btn-outline-primary btn-sm" />
                             <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel" class="btn btn-outline-warning btn-sm" />
                         </EditItemTemplate>
+
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="NO" Visible="False">
                         <ItemTemplate>
@@ -115,14 +121,32 @@
                         <ItemTemplate>
                             <asp:Label ID="lbl_EPF" runat="server" Text='<%#Eval("EPF") %>'></asp:Label>
                         </ItemTemplate>
+
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
                     </asp:TemplateField>
                     <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Team" HeaderText="Team" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Number_Of_Absent_Days" HeaderText="Number Of Absent Days" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="Reason Category" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
@@ -143,13 +167,23 @@
                             </asp:DropDownList>
                             <%--<asp:TextBox ID="txtRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:TextBox>--%>
                         </EditItemTemplate>
+
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
+<ItemStyle Width="10%"></ItemStyle>
                     </asp:TemplateField>
                     <asp:BoundField DataField="Factory_And_Shift" HeaderText="Factory And Shift" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+<FooterStyle Width="10%"></FooterStyle>
+
+<HeaderStyle Width="10%"></HeaderStyle>
+
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" BorderStyle="Groove" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" BorderStyle="Groove" BorderColor="#003366" />
                 <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F7F7F7" />
