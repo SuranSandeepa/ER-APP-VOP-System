@@ -1,14 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Resignation.aspx.cs" Inherits="ER_APP_VOP_System.Resignation" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="CSS/background.css" rel="stylesheet" />
 
     <style>
+        span{
+            color:white;
+        }
         .row {
-            background: rgb(219,226,226);
+            background: #28313B;
             border-radius: 30px;
         }
 
-        img {
+        side {
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
         }
@@ -32,50 +36,60 @@
     </style>
 
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+    <%--Header Topic--%>
+    <section>
+        <div class="container">
+            <h1>
+                Resignation
+            </h1>
+        </div>
+    </section>
 
     <section class="Form my-4 mx-5">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-5">
-                    <img src="Images/r3.png" class="img-fluid" alt="Resignation-Form" />
+                    <img src="Images/r3.png" class="side img-fluid" alt="Resignation-Form" />
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
-                    <h1 class="font-weight-bold py-3">Resignation</h1>
                     <form>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                Date<asp:TextBox ID="txtRDate" class="form-control my-1 p-1" placeholder="Date" runat="server"></asp:TextBox>
+                                <span>Date :</span><asp:TextBox ID="txtRDate" class="form-control my-1 p-1" placeholder="Date" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                EPF<asp:TextBox ID="txtREPF" class="form-control my-1 p-1" placeholder="EPF" runat="server"></asp:TextBox>
+                                <span>EPF :</span><asp:TextBox ID="txtREPF" class="form-control my-1 p-1" placeholder="EPF" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                Name<asp:TextBox ID="txtRName" class="form-control my-1 p-1" placeholder="Name" runat="server"></asp:TextBox>
+                                <span>Name :</span><asp:TextBox ID="txtRName" class="form-control my-1 p-1" placeholder="Name" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                Team<asp:TextBox ID="txtRTeam" class="form-control my-1 p-1" placeholder="Team" runat="server"></asp:TextBox>
+                                <span>Team :</span><asp:TextBox ID="txtRTeam" class="form-control my-1 p-1" placeholder="Team" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                LWD<asp:TextBox ID="txtRLWD" class="form-control my-1 p-1" placeholder="LWD" runat="server"></asp:TextBox>
+                                <span>LWD :</span><asp:TextBox ID="txtRLWD" class="form-control my-1 p-1" placeholder="LWD" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                Resignation Date<asp:TextBox ID="txtRrd" class="form-control my-1 p-1" placeholder="Reasignation Date" runat="server"></asp:TextBox>
+                                <span>Resignation Date :</span><asp:TextBox ID="txtRrd" class="form-control my-1 p-1" placeholder="Reasignation Date" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                Termination Payment Date<asp:TextBox ID="txtRtpd" class="form-control my-1 p-1" placeholder="Termination Payment Date" runat="server"></asp:TextBox>
+                                <span>Termination Payment Date :</span><asp:TextBox ID="txtRtpd" class="form-control my-1 p-1" placeholder="Termination Payment Date" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
@@ -93,15 +107,15 @@
 
     <section>
         <div class="container">
-            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server">
+            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server" BackColor="#CCCCCC">
                 <Columns>
-                    <asp:BoundField DataField="RDate" HeaderText="Date" />
-                    <asp:BoundField DataField="REPF" HeaderText="EPF" />
-                    <asp:BoundField DataField="RName" HeaderText="Name" />
-                    <asp:BoundField DataField="RTeam" HeaderText="Team" />
-                    <asp:BoundField DataField="RLWD" HeaderText="LWD" />
-                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" />
-                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" />
+                    <asp:BoundField DataField="RDate" HeaderText="Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="REPF" HeaderText="EPF" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="RName" HeaderText="Name" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="RTeam" HeaderText="Team" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="RLWD" HeaderText="LWD" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
+                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" />
                 </Columns>
                 <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
             </asp:GridView>

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="VOPManaging.aspx.cs" Inherits="ER_APP_VOP_System.VOPManaging" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="CSS/background.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
             width: 32%;
@@ -13,12 +14,13 @@
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <%--Header Topic--%>
     <section>
         <div class="container">
-            <h1 style="text-align: center; font-size: 45px; text-transform: uppercase; letter-spacing: 2px; margin-top: 25px; font-family: merinda">
+            <h1>
                 VOP Managing Screen
             </h1>
         </div>
@@ -29,7 +31,7 @@
     <div>
         <%--dropdown--%>
         <div>
-            <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom">
+            <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style=" background-color:#28313B; color:white;">
                 <table class="auto-style1">
                     <tr>
                         <td class="auto-style2">
@@ -47,7 +49,7 @@
 
                         </td>
                         <td>
-                            <asp:Button ID="btnSearchRC" class="btn btn-dark" runat="server" BackColor="#333333" Text="Search" BorderStyle="None" Font-Size="Medium" ForeColor="White" OnClick="btnSearchRC_Click" />
+                            <asp:Button ID="btnSearchRC" class="btn" runat="server" Text="Search" OnClick="btnSearchRC_Click" />
                         </td>
                     </tr>
                 </table>
@@ -58,7 +60,7 @@
         <%--DataGridView--%>
         <div class="container">
             <%--style="margin: auto;" class="container w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom"--%>
-            <asp:GridView ID="dgvVOPManagingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPManagingScreen_RowCancelingEdit" OnRowEditing="dgvVOPManagingScreen_RowEditing" OnRowUpdating="dgvVOPManagingScreen_RowUpdating" HorizontalAlign="Center">
+            <asp:GridView ID="dgvVOPManagingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPManagingScreen_RowCancelingEdit" OnRowEditing="dgvVOPManagingScreen_RowEditing" OnRowUpdating="dgvVOPManagingScreen_RowUpdating" HorizontalAlign="Center" BackColor="#CCCCCC">
                 <Columns>
                     <asp:TemplateField HeaderText="Update">
                         <ItemTemplate>

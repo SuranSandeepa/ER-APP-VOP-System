@@ -72,10 +72,17 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
+    <Content Include="CSS\background.css" />
     <Content Include="CSS\HomePage.css" />
     <Content Include="CSS\UploadFilebtn.css" />
     <Content Include="Feedback.aspx" />
+    <Content Include="Images\bg1.jpeg" />
+    <Content Include="Images\bg2.jpg" />
+    <Content Include="Images\bg3.jpg" />
+    <Content Include="Images\Logo_of_MAS.png" />
+    <Content Include="Images\Logo_of_MAS_Holdings.png" />
     <Content Include="Images\MAS-Holdings-White.png" />
+    <Content Include="Images\mas.jpg" />
     <Content Include="Images\r1.jpg" />
     <Content Include="Images\r10.jpeg" />
     <Content Include="Images\r2.jpeg" />
@@ -165,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExcelUpload\" />
+    <Folder Include="JS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
