@@ -59,7 +59,7 @@
                     <form>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <span>Date :</span><asp:TextBox ID="txtRDate" class="form-control my-1 p-1" placeholder="Date" runat="server"></asp:TextBox>
+                                <span>Date :</span><asp:TextBox ID="txtRDate" class="form-control my-1 p-1" placeholder="Date" runat="server" TextMode="Date"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
@@ -84,12 +84,12 @@
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <span>Resignation Date :</span><asp:TextBox ID="txtRrd" class="form-control my-1 p-1" placeholder="Reasignation Date" runat="server"></asp:TextBox>
+                                <span>Resignation Date :</span><asp:TextBox ID="txtRrd" class="form-control my-1 p-1" placeholder="Reasignation Date" runat="server" TextMode="Date"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <span>Termination Payment Date :</span><asp:TextBox ID="txtRtpd" class="form-control my-1 p-1" placeholder="Termination Payment Date" runat="server"></asp:TextBox>
+                                <span>Termination Payment Date :</span><asp:TextBox ID="txtRtpd" class="form-control my-1 p-1" placeholder="Termination Payment Date" runat="server" TextMode="Date"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
