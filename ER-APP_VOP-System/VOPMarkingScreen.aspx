@@ -95,7 +95,7 @@
         <div class="container">
             <%--BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black"--%>
 
-            <asp:GridView ID="dgvVOPMarkingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating" HorizontalAlign="Center" BackColor="#99CCFF" BorderColor="#003366">
+            <asp:GridView ID="dgvVOPMarkingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPMarkingScreen_RowCancelingEdit" OnRowEditing="dgvVOPMarkingScreen_RowEditing" OnRowUpdating="dgvVOPMarkingScreen_RowUpdating" HorizontalAlign="Center" BackColor="White" BorderColor="#003366">
                 <Columns>
                     <asp:TemplateField HeaderText="Update" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
                         <ItemTemplate>
@@ -183,7 +183,7 @@
                     </asp:BoundField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" BorderStyle="Groove" BorderColor="#003366" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" BorderStyle="Groove" BorderColor="#003366" />
                 <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F7F7F7" />

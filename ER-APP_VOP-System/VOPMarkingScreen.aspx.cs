@@ -31,7 +31,7 @@ namespace ER_APP_VOP_System
         protected void ShowData()
         {
             //Select Query (Search by Factory_And_Shift LIKE)
-            String myquery = "SELECT no,EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,Factory_And_Shift FROM Database_No_1 where Factory_And_Shift LIKE '" + dwFactoryShift.SelectedItem.Text + "'";
+            String myquery = "SELECT no,EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,Factory_And_Shift FROM Database_No_1 where Factory_And_Shift LIKE'" + dwFactoryShift.SelectedItem.Text + "'ORDER BY no DESC";
 
             con = new SqlConnection(mycon);
             cmd = new SqlCommand();

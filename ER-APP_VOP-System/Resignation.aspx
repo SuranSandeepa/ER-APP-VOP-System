@@ -4,9 +4,10 @@
     <link href="CSS/background.css" rel="stylesheet" />
 
     <style>
-        span{
-            color:white;
+        span {
+            color: white;
         }
+
         .row {
             background: #28313B;
             border-radius: 30px;
@@ -43,8 +44,7 @@
     <%--Header Topic--%>
     <section>
         <div class="container">
-            <h1>
-                Resignation
+            <h1>Resignation
             </h1>
         </div>
     </section>
@@ -107,59 +107,59 @@
 
     <section>
         <div class="container">
-            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server" BackColor="#99CCFF" BorderColor="#003366">
+            <asp:GridView ID="gvResignation" CssClass="table table-bordered table-hover table-responsive" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" runat="server" BackColor="White" BorderColor="#003366">
                 <Columns>
-                    <asp:BoundField DataField="RDate" HeaderText="Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="RDate" HeaderText="Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="REPF" HeaderText="EPF" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="REPF" HeaderText="EPF" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="RName" HeaderText="Name" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="RName" HeaderText="Name" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="RTeam" HeaderText="Team" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="RTeam" HeaderText="Team" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="RLWD" HeaderText="LWD" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="RLWD" HeaderText="LWD" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="RResignDate" HeaderText="Resignation Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%" >
-<FooterStyle Width="10%"></FooterStyle>
+                    <asp:BoundField DataField="RTerminationPaymentDate" HeaderText="Termination Payment Date" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
                 </Columns>
-                <HeaderStyle BackColor="Black" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
+                <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
             </asp:GridView>
         </div>
     </section>

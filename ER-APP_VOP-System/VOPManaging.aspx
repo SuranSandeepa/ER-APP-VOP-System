@@ -60,7 +60,7 @@
         <%--DataGridView--%>
         <div class="container">
             <%--style="margin: auto;" class="container w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom"--%>
-            <asp:GridView ID="dgvVOPManagingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPManagingScreen_RowCancelingEdit" OnRowEditing="dgvVOPManagingScreen_RowEditing" OnRowUpdating="dgvVOPManagingScreen_RowUpdating" HorizontalAlign="Center" BackColor="#99CCFF" BorderColor="#003366">
+            <asp:GridView ID="dgvVOPManagingScreen" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="False" EmptyDataText="No Record Found" PageSize="30" OnRowCancelingEdit="dgvVOPManagingScreen_RowCancelingEdit" OnRowEditing="dgvVOPManagingScreen_RowEditing" OnRowUpdating="dgvVOPManagingScreen_RowUpdating" HorizontalAlign="Center" BackColor="White" BorderColor="#003366">
                 <Columns>
                     <asp:TemplateField HeaderText="Update">
                         <ItemTemplate>
@@ -137,7 +137,7 @@
                     </asp:TemplateField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" BorderColor="#003366" BorderStyle="Groove" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" BorderColor="#003366" BorderStyle="Groove" />
                 <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F7F7F7" />

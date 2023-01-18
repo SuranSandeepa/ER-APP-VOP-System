@@ -58,7 +58,7 @@ namespace ER_APP_VOP_System
             using (SqlConnection sqlconn = new SqlConnection(mycon))
             {
                 sqlconn.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Resignation", mycon);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Resignation ORDER BY RNo DESC", mycon);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 gvResignation.DataSource = dt;

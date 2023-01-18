@@ -32,7 +32,7 @@
 
     <section>
         <div class="container">
-            <asp:GridView ID="dgvExcelUpload" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" BackColor="#99CCFF" BorderColor="#003366">
+            <asp:GridView ID="dgvExcelUpload" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" BackColor="Silver" BorderColor="#003366" Font-Bold="True" Font-Names="Calibri">
                 <Columns>
                     <asp:BoundField DataField="Date" HeaderText="Date" />
                     <asp:BoundField DataField="EPF" HeaderText="EPF" />
@@ -60,7 +60,7 @@
                     <asp:BoundField DataField="Factory_And_Shift" HeaderText="Factory & Shift" />
                     <asp:BoundField DataField="Service_Period" HeaderText="Service Period" />
                 </Columns>
-                <HeaderStyle BackColor="Black" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
+                <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
             </asp:GridView>
         </div>
     </section>

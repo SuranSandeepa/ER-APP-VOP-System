@@ -32,7 +32,7 @@ namespace ER_APP_VOP_System
         protected void ShowData()
         {
             //Select Query 
-            String myquery = "SELECT no,EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,First_VOP_Status,Termination_Payment_Status,Secod_VOP_Status FROM Database_No_1 where Reason_Category LIKE '" + dwRC.SelectedItem.Text + "'";
+            String myquery = "SELECT no,EPF,Name,Team,Number_Of_Absent_Days,Reason_Category,First_VOP_Status,Termination_Payment_Status,Secod_VOP_Status FROM Database_No_1 where Reason_Category LIKE'" + dwRC.SelectedItem.Text + "'ORDER BY no DESC";
 
             con = new SqlConnection(mycon);
             cmd = new SqlCommand();
