@@ -72,7 +72,7 @@
                         <div class="form-row">
                             <div class="col-lg-7">
                                 <asp:Button ID="btnFSave" class="Rsave mt-3 mb-5" runat="server" Text="Save" OnClick="btnFSave_Click" />
-                                <asp:Button ID="btnFCancel" class="Rsave mt-3 mb-5" runat="server" Text="Cancel" />
+                                <asp:Button ID="btnFCancel" class="Rsave mt-3 mb-5" runat="server" Text="Cancel" OnClick="btnFCancel_Click" />
                             </div>
                         </div>
                     </form>

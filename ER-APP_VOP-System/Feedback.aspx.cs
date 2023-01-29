@@ -60,5 +60,12 @@ namespace ER_APP_VOP_System
                 gvFeedback.DataBind();
             }
         }
+
+        protected void btnFCancel_Click(object sender, EventArgs e)
+        {
+            txtFQ1.Text = "";
+            txtFQ2.Text = "";
+            txtFQ3.Text = "";
+        }
     }
 }

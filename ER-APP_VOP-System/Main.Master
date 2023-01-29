@@ -7,10 +7,6 @@
     <title></title>
     <%--Bootstrap CSS--%>
     <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
-    <%--DatabaseTables CSS--%>
-    <link href="Datatables/CSS/jquery.dataTables.min.css" rel="stylesheet" />
-    <%--Fontawesome CSS--%>
-    <link href="Fontawesome/css/all.css" rel="stylesheet" />
     <%--Jquery--%>
     <script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
     <%--Popper JS--%>
@@ -25,7 +21,7 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#28313B">
-                <img src="Images/Logo_of_MAS_Holdings.png" width="100" height="40" />
+                <img src="Images/Logo_of_MAS_Holdings.png" width="80" height="30" />
                 <%--&nbsp;&nbsp;--%>
                 <%--<a class="navbar-brand" href="#">VOP system</a>--%>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
