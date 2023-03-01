@@ -108,7 +108,7 @@
     <Compile Include="AdminScreen.aspx.designer.cs">
       <DependentUpon>AdminScreen.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Feedback.aspx.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
