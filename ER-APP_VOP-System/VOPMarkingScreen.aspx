@@ -20,8 +20,7 @@
     <%--Header Topic--%>
     <section>
         <div class="container">
-            <h1>
-                VOP Marking Screen
+            <h1>VOP Marking Screen
             </h1>
         </div>
     </section>
@@ -32,7 +31,7 @@
 
     <%--dropdown--%>
     <div>
-        <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style=" background-color:#28313B; color:white;">
+        <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="background-color: #28313B; color: white;">
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
@@ -46,7 +45,7 @@
 
                     </td>
                     <td>
-                        <asp:Button ID="btnSearchFnS" class="btn" runat="server" Text="Search" OnClick="btnSearchFnS_Click"/>
+                        <asp:Button ID="btnSearchFnS" class="btn" runat="server" Text="Search" OnClick="btnSearchFnS_Click" />
                     </td>
                 </tr>
             </table>
@@ -106,11 +105,11 @@
                             <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel" class="btn btn-outline-warning btn-sm" />
                         </EditItemTemplate>
 
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="NO" Visible="False">
                         <ItemTemplate>
@@ -122,30 +121,30 @@
                             <asp:Label ID="lbl_EPF" runat="server" Text='<%#Eval("EPF") %>'></asp:Label>
                         </ItemTemplate>
 
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:TemplateField>
                     <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Team" HeaderText="Team" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Number_Of_Absent_Days" HeaderText="Number Of Absent Days" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
@@ -168,16 +167,16 @@
                             <%--<asp:TextBox ID="txtRC" runat="server" Text='<%#Eval("Reason_Category") %>'></asp:TextBox>--%>
                         </EditItemTemplate>
 
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
-<ItemStyle Width="10%"></ItemStyle>
+                        <ItemStyle Width="10%"></ItemStyle>
                     </asp:TemplateField>
                     <asp:BoundField DataField="Factory_And_Shift" HeaderText="Factory And Shift" ReadOnly="True" HeaderStyle-Width="10%" ItemStyle-Width="10%" FooterStyle-Width="10%">
-<FooterStyle Width="10%"></FooterStyle>
+                        <FooterStyle Width="10%"></FooterStyle>
 
-<HeaderStyle Width="10%"></HeaderStyle>
+                        <HeaderStyle Width="10%"></HeaderStyle>
 
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
