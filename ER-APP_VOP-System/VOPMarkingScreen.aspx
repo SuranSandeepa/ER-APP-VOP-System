@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/background.css" rel="stylesheet" />
+    <link href="CSS/main.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
             width: 32%;
@@ -45,7 +46,7 @@
 
                     </td>
                     <td>
-                        <asp:Button ID="btnSearchFnS" class="btn" runat="server" Text="Search" OnClick="btnSearchFnS_Click" />
+                        <asp:Button ID="btnSearchFnS" class="btn btn-light" runat="server" Text="Search" OnClick="btnSearchFnS_Click" />
                     </td>
                 </tr>
             </table>
