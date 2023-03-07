@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ResignationForm.aspx.cs" Inherits="ER_APP_VOP_System.ResignationForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="CSS/main.css" rel="stylesheet" />
     <style>
         .row {
             background: rgb(219,226,226);

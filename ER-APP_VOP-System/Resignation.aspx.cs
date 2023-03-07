@@ -17,8 +17,8 @@ namespace ER_APP_VOP_System
     public partial class Resignation : System.Web.UI.Page
     {
 
-        //DB Connection
-        String mycon = @"Data Source=DESKTOP-DCCUTP6\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";        
+        //Create a connection string to connect to the SQL Server database
+        string mycon = DBConnection.ConnectionString;
 
 
         protected void Page_Load(object sender, EventArgs e)
