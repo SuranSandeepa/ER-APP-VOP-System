@@ -16,8 +16,8 @@ namespace ER_APP_VOP_System
 
     public partial class AdminScreen : System.Web.UI.Page
     {
-        //DB Connection
-        String mycon = "Data Source=DESKTOP-DCCUTP6\\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";
+        //Create a connection string to connect to the SQL Server database
+        string mycon = DBConnection.ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -100,7 +100,6 @@ namespace ER_APP_VOP_System
                     String er, String vsl, String factoryShift, String servicePeriod)
         {
             String query = "insert into Database_No_1(Date,EPF,PN, Name, Team, Classification, Last_Working_Date, Number_Of_Absent_Days, Address, Reason_Category, Reason, First_VOP, First_VOP_Status, Resign_Termination_Payment, Termination_Payment_Status, Second_VOP, Secod_VOP_Status, Resignation, Termination_Date, Termination_Approval, Termination_Status, ER, VSL, Factory_And_Shift, Service_Period) values('" + date + "','" + epf + "','" + pn + "','" + name + "','" + team + "','" + classification + "','" + lastWorkingDate + "','" + noOfAbsentDays + "','" + address + "','" + reasonCategory + "','" + reason + "','" + firstVop + "','" + firstVopStatus + "','" + resignTerminationPayment + "','" + terminationPaymentStatus + "','" + secondVop + "','" + secondVopStatus + "','" + resignation + "','" + terminationDate + "','" + terminationApproval + "','" + terminationStatus + "','" + er + "','" + vsl + "','" + factoryShift + "','" + servicePeriod + "')";
-            //String mycon = "Data Source=DESKTOP-DCCUTP6\\SQLEXPRESS; Initial Catalog=MAS_Synergy_HR; Integrated Security=true";
             SqlConnection con = new SqlConnection(mycon);
             con.Open();
             SqlCommand cmd = new SqlCommand();

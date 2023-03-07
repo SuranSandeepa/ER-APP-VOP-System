@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/background.css" rel="stylesheet" />
+    <link href="CSS/main.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -23,7 +24,7 @@
                 <asp:FileUpload ID="ExcelFileUpload" runat="server" />
             </div>
             <div class="col">
-                <asp:Button class="btn" Text="Upload" OnClick="btnExcelUpload_Click" runat="server" />
+                <asp:Button class="btn btn-light" Text="Upload" OnClick="btnExcelUpload_Click" runat="server" />
             </div>
         </div>
     </div>
