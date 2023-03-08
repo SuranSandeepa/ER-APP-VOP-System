@@ -1,7 +1,7 @@
 ﻿body {
-   background-image: url('../Images/bg2.jpg');
-   max-width:100%;
-   max-height:100%;
+    background-image: url('../Images/Winter.jpg');
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .typing {
@@ -12,7 +12,7 @@
     align-items: baseline;
 }
 
-.typing h1 {
+.typing h1{
         font-size: 80px;
         font-weight: 800;
     }
