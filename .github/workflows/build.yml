@@ -2,27 +2,20 @@ name: Build Validation
 
 on:
   push:
-    branches: [ "master" ]  # Trigger on pushes to master branch
+    branches: [ "master" ]  # Changed to "master" branch
   pull_request:
-    branches: [ "master" ]  # Trigger on PRs to master branch
+    branches: [ "master" ]  # Changed to "master" branch
 
 jobs:
   build:
-    runs-on: windows-latest  # ASP.NET apps work best on Windows runners
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: |  # Match your project's .NET version
-            4.8
-            6.0.x
-
-      - name: Restore dependencies
-        run: nuget restore  # Restore NuGet packages
+      - name: Restore NuGet packages
+        run: nuget restore
 
       - name: Build solution
-        run: msbuild /p:Configuration=Release  # Build the solution in Release mode
+        run: msbuild /p:Configuration=Release
