@@ -18,6 +18,6 @@ jobs:
         run: nuget restore
 
       - name: Build solution
+        shell: cmd  # Run this step in CMD instead of PowerShell
         run: |
-          # Use the full path to MSBuild
           "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release
