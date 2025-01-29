@@ -2,13 +2,13 @@ name: Build Validation
 
 on:
   push:
-    branches: [ "master" ]  # Changed to "master" branch
+    branches: [ "master" ]  # Trigger on pushes to master branch
   pull_request:
-    branches: [ "master" ]  # Changed to "master" branch
+    branches: [ "master" ]  # Trigger on PRs to master branch
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-latest  # Use Windows runner for .NET Framework
 
     steps:
       - name: Checkout code
@@ -18,4 +18,6 @@ jobs:
         run: nuget restore
 
       - name: Build solution
-        run: msbuild /p:Configuration=Release
+        run: |
+          # Use the full path to MSBuild
+          "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release
