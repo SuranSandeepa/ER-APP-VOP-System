@@ -2,13 +2,13 @@ name: Build Validation
 
 on:
   push:
-    branches: [ "master" ]  # Trigger on pushes to master branch
+    branches: [ "master" ]  
   pull_request:
-    branches: [ "master" ]  # Trigger on PRs to master branch
+    branches: [ "master" ]  
 
 jobs:
   build:
-    runs-on: windows-latest  # Use Windows runner for .NET Framework
+    runs-on: windows-latest  
 
     steps:
       - name: Checkout code
@@ -17,7 +17,15 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore
 
-      - name: Build solution
-        shell: cmd  # Run this step in CMD instead of PowerShell
+      - name: Locate MSBuild Path
+        shell: cmd
         run: |
-          "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release
+          @echo off
+          for /f "tokens=*" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.Component.MSBuild -property installationPath') do set MSBUILD_PATH=%%i
+          echo Found MSBuild at: %MSBUILD_PATH%
+          echo MSBUILD_PATH=%MSBUILD_PATH%>>%GITHUB_ENV%
+
+      - name: Build solution
+        shell: cmd  
+        run: |
+          "%MSBUILD_PATH%\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release
