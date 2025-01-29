@@ -2,9 +2,9 @@ name: Build Validation
 
 on:
   push:
-    branches: [ "main" ]  # Trigger on pushes to main branch
+    branches: [ "master" ]  # Trigger on pushes to master branch
   pull_request:
-    branches: [ "main" ]  # Trigger on PRs to main branch
+    branches: [ "master" ]  # Trigger on PRs to master branch
 
 jobs:
   build:
