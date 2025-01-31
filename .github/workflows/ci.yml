@@ -1,4 +1,4 @@
-name: .NET Build CI
+name: .NET Framework Build CI
 
 on:
   push:
@@ -10,19 +10,20 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '6.0.x'
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
 
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1
 
-      - name: Build
-        run: dotnet build --no-restore --configuration Release
+      - name: Restore NuGet packages
+        run: nuget restore ER-APP_VOP-System.sln
+
+      - name: Build with MSBuild
+        run: msbuild ER-APP_VOP-System.sln /p:Configuration=Release
