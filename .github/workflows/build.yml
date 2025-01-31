@@ -1,31 +1,28 @@
-name: Build Validation
+name: .NET Build CI
 
 on:
   push:
-    branches: [ "master" ]  
+    branches:
+      - main
   pull_request:
-    branches: [ "master" ]  
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: windows-latest  
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Restore NuGet packages
-        run: nuget restore
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
 
-      - name: Locate MSBuild Path
-        shell: cmd
-        run: |
-          @echo off
-          for /f "tokens=*" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.Component.MSBuild -property installationPath') do set MSBUILD_PATH=%%i
-          echo Found MSBuild at: %MSBUILD_PATH%
-          echo MSBUILD_PATH=%MSBUILD_PATH%>>%GITHUB_ENV%
+      - name: Restore dependencies
+        run: dotnet restore
 
-      - name: Build solution
-        shell: cmd  
-        run: |
-          "%MSBUILD_PATH%\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
